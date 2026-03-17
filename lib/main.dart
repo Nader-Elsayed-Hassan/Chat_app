@@ -1,10 +1,12 @@
 import 'package:chat_application/screens/splash_screen.dart';
+import 'package:chat_application/services/notification_services.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await NotificationServices.initNotification();
   runApp(const MyApp());
 }
 
